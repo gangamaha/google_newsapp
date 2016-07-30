@@ -1,5 +1,5 @@
 # google_newsapp
-Opens the top news of the searched keyword in new tabs of your default browser
+Opens the latest news of the searched keyword in new tabs of your default browser
 
 I have used Python version 2.x for this project.
 
