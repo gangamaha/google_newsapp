@@ -1,9 +1,7 @@
 # google_newsapp
 Opens the latest news of the searched keyword in new tabs of your default browser
 
-I have used Python version 2.x for this project.
-
-Imagine opening google news in your browser searching for a keyword, pressing search button and openings all the links in the 1st page of search result to get latest update. This is exactly what this Python script does, but all in just 1 simple step.
+Imagine opening google news in your browser searching for a keyword, pressing search button and openings the news links in the 1st page of search result to get latest update. This is exactly what this Python script does, but all in just 1 simple step.
 
 Run the python script from your IDE or from command line python google_newsapp.py
 
