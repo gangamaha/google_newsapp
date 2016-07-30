@@ -59,16 +59,16 @@ def get_links(raw_html):
             raw_html = raw_html[end_string:]
     return items
 
-# open a public URL, in this case, the webbrowser docs
+# if search keyword has multiple words, we need to replace the space by +
 if ' ' in keyword:
     keyword = keyword.replace(' ', "+")
 
 url = "https://www.google.com/search?hl=en&gl=us&authuser=0&biw=1366&bih=667&tbm=nws&q="+keyword+"&oq="+keyword+"&gs_l=serp.3..0l10.6720.7574.0.7869.5.3.0.2.2.0.64.160.3.3.0....0...1c.1.64.serp..0.5.164.Mi05-kl1alI"
 raw_html = download_links(url)  # this has the entire web page html
-# print raw_html
+# extract the web links
 links = []
 links = get_links(raw_html)
-# print links
+# open the links in new tabs of default browser, in my case Google chrome
 limit_news = 10
 for link in links:
         if limit_news != 0:
