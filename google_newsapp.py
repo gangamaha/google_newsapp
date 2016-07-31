@@ -2,7 +2,12 @@ import webbrowser
 import time
 import sys
 new = 2  # open in a new tab, if possible
-keyword = "presedential election USA"
+keyword = raw_input("What news are your currently interested!!").strip()
+
+# Checking for user input. Exiting if there is no input as nothing to search for
+if keyword is '':
+    print "No topic entered by user. Please enter a valid topic name when prompted. Currently Exiting!!"
+    exit(0)
 
 
 def download_links(url):
@@ -70,6 +75,7 @@ links = []
 links = get_links(raw_html)
 # open the links in new tabs of default browser, in my case Google chrome
 limit_news = 10
+print "Processing your news request. Please wait, each news will be opened as new tab in your default browser"
 for link in links:
         if limit_news != 0:
             webbrowser.open(link, new=new)
